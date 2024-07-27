@@ -1,0 +1,306 @@
+@import url("/public/font.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-white: #ffffff;
+
+    --color-gray-100: #f9f9f9;
+    --color-gray-200: #e1e1e1;
+    --color-gray-300: #ededed;
+    --color-gray-400: #cbcbcb;
+    --color-gray-500: #adadad;
+    --color-gray-600: #757575;
+    --color-gray-700: #717171;
+    --color-gray-800: #353535;
+
+    --color-black: #0c0c0c;
+
+    --color-error: #c30000;
+    --color-error-light: #ed2e2e;
+    --color-error-extralight: #fff2f2;
+
+    --color-sucess: #00966d;
+    --color-sucess-light: #00ba88;
+    --color-sucess-extralight: #f3fdfa;
+
+    --color-warning: #a9791c;
+    --color-warning-light: #f4b740;
+    --color-warning-extralight: #fff8e1;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "PlayfairDisplay";
+  min-height: 100vh;
+  user-select: none;
+  background-color: rgb(var(--background-app-rgb));
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  /* border: none; */
+  outline: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 2px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track (area behind the thumb) */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb (draggable element) */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1; /* Color of the corner (where vertical and horizontal scrollbars meet) */
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbarDesctop {
+    -ms-overflow-style: block; /* IE and Edge */
+    scrollbar-width: block; /* Firefox */
+  }
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+button:disabled {
+  cursor: default;
+  background-color: rgb(var(--color-secondary-100), 0.5);
+  pointer-events: none;
+  box-shadow: none;
+}
+
+/* inupt number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* TABLE */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table .title-row {
+  background-color: rgb(var(--color-secondary-100));
+}
+
+table td,
+table th {
+  border-bottom: 1px solid rgb(var(--color-secondary-200));
+  text-align: right;
+  white-space: nowrap;
+}
+
+table th {
+  padding: 0.6rem 1rem;
+  color: rgb(var(--color-secondary-600));
+  font-size: 0.9rem;
+}
+
+table td {
+  font-size: 0.85rem;
+  padding: 1rem 1rem;
+  color: rgb(var(--color-secondary-600));
+}
+
+.navbar {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(100%); /* Initially hide the navbar */
+}
+
+.navbar.open {
+  transform: translateX(0); /* Slide in the navbar */
+}
+
+.textField {
+  border: 1px solid;
+  border-radius: 4px;
+  width: 100%;
+  border-color: #e1e1e1;
+  color: #adadad;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+
+.active-icon {
+  color: white;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 1 !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: white;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 1em 1em 0 0;
+  bottom: -0.25em !important;
+  display: flex;
+  left: 0 !important;
+  margin: 0 auto;
+  padding: 0.5em 0.25em;
+  right: 0 !important;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #adadad !important;
+  height: 6px !important;
+  opacity: 1 !important;
+  width: 6px !important;
+  z-index: inherit;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #F9C06A !important;
+  box-shadow: 0 0 0 3px #e5f2e9;
+  height: 8px !important;
+  width: 8px !important;
+  z-index: inherit;
+}
+
+.swiper-button-prev {
+  color: #fff2f2 !important;
+}
+.swiper-button-next {
+  color: #fff2f2 !important;
+}
+
+/*-----------------------swiper-slide-dasboard--------------------*/
+.swiper-dasboard {
+  width: 230px !important;
+  margin: 5px !important;
+}
+/* @media (min-width: 410px) {
+  .swiper-dasboard {
+    width: 169px !important;
+    margin: 5px !important;
+  }
+} */
+@media (min-width: 601px) {
+  .swiper-dasboard {
+    width: 149px !important;
+    margin: 5px !important;
+  }
+}
+
+:root {
+  --swiper-pagination-color: #ffffff;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+
+.modal {
+  z-index: 1000;
+}
+
+/* Hide the default radio button */
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+  position: relative;
+  margin-right: 8px;
+}
+
+/* Style the custom radio button */
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* Style the checked radio button */
+input[type="radio"]:checked {
+  border-color: #f2f2f2;
+}
+
+input[type="radio"]:checked::before {
+  background-color: #00ba88;
+  width: 13px;
+  height: 13px;
+}
