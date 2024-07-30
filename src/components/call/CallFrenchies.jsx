@@ -3,35 +3,36 @@ import React from "react";
 const branches = [
   {
     image: "/styles/ekbatan.jpg",
-    branchetitle: "شعبه اکباتان",
-    brancheAdrress: "آدرس: شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم",
-    brancheNumber: "شماره تماس:۰۲۱-۵۴۵۶۴۳-۵۳",
-    brancheWorkTime: "ساعت کاری: همه روزه از ساعت ۱۲ تا ۲۳ بجز روزهای تعطیل",
+    branchetitle: "New York Branch",
+    brancheAdrress: "Address: 123 Broadway, New York, NY 10006",
+    brancheNumber: "Contact Number: +1 212-555-1234",
+    brancheWorkTime: "Working Hours: Daily from 12 PM to 11 PM except holidays",
     id: 1,
   },
   {
     image: "/styles/chalos.jpg",
-    branchetitle: "شعبه چالوس",
+    branchetitle: "Paris Branch",
     brancheAdrress:
-      "چالوس، خیابان ۱۷ شهریور، بعد کوچه کوروش، جنب داروخانه دکتر میلانی",
-    brancheNumber: "شماره تماس:۰۲۱-۵۲۵۲-۵۳",
-    brancheWorkTime: "ساعت کاری: همه روزه از ساعت ۱۲ تا ۲۳ بجز روزهای تعطیل",
+      "Address: 45 Avenue de la Grande Armée, 75116 Paris, France",
+    brancheNumber: "Contact Number: +33 1 45 67 89 10",
+    brancheWorkTime: "Working Hours: Daily from 12 PM to 11 PM except holidays",
     id: 2,
   },
   {
     image: "/styles/aghdasieh.jpg",
-    branchetitle: "شعبه اقدسیه",
-    brancheAdrress: "خیابان اقدسیه ، نرسیده به میدان خیام، پلاک ۸",
-    brancheNumber: "شماره تماس:۰۲۱-۵۴۵۲۵۲-۵۳",
-    brancheWorkTime: "ساعت کاری: همه روزه از ساعت ۱۲ تا ۲۳ بجز روزهای تعطیل",
+    branchetitle: "Tokyo Branch",
+    brancheAdrress:
+      "Address: 2-1-1 Nihonbashi, Chuo City, Tokyo 103-0027, Japan",
+    brancheNumber: "Contact Number: +81 3-1234-5678",
+    brancheWorkTime: "Working Hours: Daily from 12 PM to 11 PM except holidays",
     id: 3,
   },
   {
     image: "/styles/vanak.jpg",
-    branchetitle: "شعبه ونک",
-    brancheAdrress: "میدان ونک، خیابان فردوسی، نبش کوچه نیلوفر، پلاک ۲۶",
-    brancheNumber: "شماره تماس:۰۲۱-۵۵۴۶۲-۵۳",
-    brancheWorkTime: "ساعت کاری: همه روزه از ساعت ۱۲ تا ۲۳ بجز روزهای تعطیل",
+    branchetitle: "London Branch",
+    brancheAdrress: "Address: 221B Baker Street, London NW1 6XE, UK",
+    brancheNumber: "Contact Number: +44 20 7946 0958",
+    brancheWorkTime: "Working Hours: Daily from 12 PM to 11 PM except holidays",
     id: 4,
   },
 ];
@@ -60,10 +61,10 @@ function CallFrenchies() {
             </div>
             <div className="flex gap-3">
               <button className="text-primary bg-secondery-50 border border-primary rounded-md px-4 py-1 text-xs md:text-sm">
-                صفحه شعبه
+                Branch page
               </button>
               <button className="text-secondery-50 bg-primary rounded-md px-4 py-1 text-xs md:text-sm">
-                دیدن در نقشه
+                See on the map
               </button>
             </div>
           </div>
