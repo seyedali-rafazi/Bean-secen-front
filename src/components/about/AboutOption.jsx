@@ -6,22 +6,22 @@ import { SlNotebook } from "react-icons/sl";
 
 const contents = [
   {
-    text: "پرسنلی مجرب و حرفه‌ای",
+    text: "Experienced and professional personnel",
     icon: <RiUser3Line className="w-6 h-6 md:w-10 md:h-10" />,
     id: 1,
   },
   {
-    text: "کیفیت بالای غذاها",
+    text: "High quality of food",
     icon: <FaChartLine className="w-6 h-6 md:w-10 md:h-10" />,
     id: 2,
   },
   {
-    text: "محیطی دلنشین و آرام",
+    text: "Pleasant and peaceful environment",
     icon: <RiHomeWifiLine className="w-6 h-6 md:w-10 md:h-10" />,
     id: 3,
   },
   {
-    text: "منوی متنوع",
+    text: "various menu",
     icon: <SlNotebook className="w-6 h-6 md:w-10 md:h-10" />,
     id: 4,
   },
@@ -36,7 +36,9 @@ function AboutOption() {
           key={content.id}
         >
           <span className="text-lg ">{content.icon}</span>
-          <span className="text-secondery-600 text-xs text-center">{content.text}</span>
+          <span className="text-secondery-600 text-xs text-center">
+            {content.text}
+          </span>
         </div>
       ))}
     </div>
