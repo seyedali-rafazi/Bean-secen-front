@@ -1,35 +1,35 @@
 import React from "react";
 const AdvatagesOptions = [
   {
-    text: "استفاده از برند شناخته شده ترخینه",
+    text: "Using the well-known Bean Scene brand",
     id: 1,
   },
   {
-    text: "مشاوره در امور حقوقی، مالی و مالیاتی",
+    text: "Consulting in legal, financial and tax matters",
     id: 2,
   },
   {
-    text: "به حداقل رساندن ریسک سرمایه گذاری",
+    text: "Minimizing investment risk",
     id: 3,
   },
   {
-    text: "پشتیبانی بازاریابی و منابع انسانی",
+    text: "Marketing and Human Resources Support",
     id: 4,
   },
   {
-    text: "تسریع روند بازگشت سرمایه",
+    text: "Accelerating the investment return process",
     id: 5,
   },
   {
-    text: "دریافت مشاوره جهت تامین مواد اولیه و تجهیزات",
+    text: "Getting advice for supplying raw materials and equipment",
     id: 6,
   },
   {
-    text: "مشاوره های تخصصی جهت مدیریت رستوران",
+    text: "Expert advice for restaurant management",
     id: 7,
   },
   {
-    text: "طرح های تشویقی برای ارتقا فروش",
+    text: "Incentive schemes to promote sales",
     id: 8,
   },
 ];
@@ -37,7 +37,7 @@ function Advatages() {
   return (
     <div className="space-y-4">
       <h2 className="w-full text-center font-bold text-xl">
-        مزیت دریافت نمایندگی
+        The advantage of getting representation
       </h2>
       <div className="flex w-full md:justify-center items-center justify-start px-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

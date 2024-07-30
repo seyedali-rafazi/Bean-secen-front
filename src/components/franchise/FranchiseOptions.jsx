@@ -3,22 +3,22 @@ import React from "react";
 const options = [
   {
     imgage: "/styles/bank.png",
-    text: "بیش از 20 شعبه فعال در سراسر کشور",
+    text: "More than 20 active branches across the country",
     id: 1,
   },
   {
     imgage: "/styles/wallet.png",
-    text: "تسهیلات راه‌اندازی رستوران و تجهیز آن",
+    text: "Facilities for setting up a restaurant and equipping it",
     id: 2,
   },
   {
     imgage: "/styles/chart.png",
-    text: "طرح‌های تشویقی ارتقای فروش",
+    text: "Sales Promotion Incentive Plans",
     id: 3,
   },
   {
     imgage: "/styles/book.png",
-    text: "اعطای دستور العمل پخت غذاها",
+    text: "Giving cooking recipes",
     id: 4,
   },
 ];

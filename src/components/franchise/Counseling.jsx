@@ -20,7 +20,7 @@ function Counseling() {
   };
   return (
     <div>
-      <h2 className="w-full font-bold text-xl text-center">دریافت مشاوره</h2>
+      <h2 className="w-full font-bold text-xl text-center">Get advice</h2>
       <div>
         <form
           className="flex flex-col gap-10 items-center justify-center h-full w-full px-4"
@@ -29,7 +29,7 @@ function Counseling() {
           <div className="flex flex-col justify-center items-center lg:flex-row gap-8 p-3 w-full ">
             <TextField
               className="border border-secondery-400 p-2 rounded-sm w-full h-[44px]"
-              placeholder=" نام  و نام خانوادگی"
+              placeholder="Name and Last Name"
               errors={errors}
               name="name"
               type="text"
@@ -37,12 +37,12 @@ function Counseling() {
               onChange={(v) => setName(v.target.value)}
               register={register}
               validationSchema={{
-                required: "نام  و نام خانوادگی  ضروری است",
+                required: "Name and Last Name are necessary",
               }}
             />
             <TextField
               className="border border-secondery-400 p-2 rounded-sm w-full h-[44px]"
-              placeholder="کد ملی"
+              placeholder="National Code"
               errors={errors}
               name="nationalNumber"
               type="number"
@@ -50,20 +50,20 @@ function Counseling() {
               onChange={(v) => setNationalNumber(v.target.value)}
               register={register}
               validationSchema={{
-                required: "کد ملی  ضروری است",
+                required: "The national code is essential",
               }}
             />
             <DatePickerField
               date={date}
               setDate={setDate}
-              label="تاریخ مشاوره"
+              label="Consultation History"
             />
           </div>
           <button
             type="submit"
             className="col-start-1 mx-auto  font-bold text-secondery-50 bg-primary py-2 rounded-md w-auto px-5"
           >
-            درخواست مشاوره
+            Consultation request
           </button>
         </form>
       </div>
