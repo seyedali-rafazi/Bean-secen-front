@@ -1,8 +1,7 @@
-# Food Ordering Frontend App
-### See [Live](https://tarkhineh-react.liara.run/)
+# CoffeeShop Frontend App
 
 
-This is the frontend application for a food ordering platform, built using React.js. The app provides a user-friendly interface for customers to browse restaurants, view menus, place orders, and track their order status.
+This is the frontend application for a CoffeeShop platform, built using React.js. The app provides a user-friendly interface for customers to browse CoffeeShops, view menus, place orders, and track their order status.
 
 ## Features
 
