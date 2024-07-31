@@ -1,5 +1,4 @@
 import React from "react";
-import Loading from "../../ui/Loading";
 import Filter from "./Filter";
 import Section from "./Section";
 import useDrink from "./useDrink";
@@ -7,21 +6,21 @@ import FoodLoadingSkeleton from "../../ui/FoodLoadingSkeleton";
 
 const drinkGroup = [
   {
-    text: "همه",
+    text: "All",
     foodGroup: "all",
     url: "",
     id: 1,
   },
   {
-    text: "نوشیدنی گرم",
-    foodGroup: "warmDrink",
-    url: "?foodGroup=warmDrink",
+    text: "Iced Tea",
+    foodGroup: "icedTea",
+    url: "?foodGroup=icedTea",
     id: 2,
   },
   {
-    text: "نوشیدنی سرد",
-    foodGroup: "coldDrink",
-    url: "?foodGroup=coldDrink",
+    text: "Iced Energy",
+    foodGroup: "icedEnergy",
+    url: "?foodGroup=icedEnergy",
     id: 3,
   },
 ];

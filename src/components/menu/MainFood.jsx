@@ -2,39 +2,32 @@ import React from "react";
 import Filter from "./Filter";
 import Section from "./Section";
 import useMainFood from "./useMainfood";
-import Loading from "../../ui/Loading";
 import FoodLoadingSkeleton from "../../ui/FoodLoadingSkeleton";
 
 const mainFoodGroup = [
   {
-    text: "همه",
+    text: "All",
     foodGroup: "all",
     url: "",
     id: 1,
   },
   {
-    text: "غذاهای ایرانی",
-    foodGroup: "persianFood",
-    url: "?foodGroup=persianFood",
+    text: "Americanos",
+    foodGroup: "americanos",
+    url: "?foodGroup=americanos",
     id: 2,
   },
   {
-    text: "غذاهای غیر ایرانی",
-    foodGroup: "notPersianFood",
-    url: "?foodGroup=notPersianFood",
+    text: "Brewed Coffees",
+    foodGroup: "brewedCoffees",
+    url: "?foodGroup=brewedCoffees",
     id: 3,
   },
   {
-    text: "پیتزاها",
-    foodGroup: "pizza",
-    url: "?foodGroup=pizza",
+    text: "Cappuccinos",
+    foodGroup: "cappuccinos",
+    url: "?foodGroup=cappuccinos",
     id: 4,
-  },
-  {
-    text: "ساندویچ",
-    foodGroup: "sandawich",
-    url: "?foodGroup=sandawich",
-    id: 5,
   },
 ];
 

@@ -39,11 +39,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/search-result" element={<SearchResult />} />
           <Route path="/branch-menu" element={<BranchMenu />}>
-            <Route index element={<Navigate to="mainfood" replace />} />
-            <Route path="mainfood" element={<MainFood />} />
-            <Route path="appetizer" element={<Appetizer />} />
-            <Route path="dessert" element={<Dessert />} />
-            <Route path="drink" element={<Drink />} />
+            <Route index element={<Navigate to="hotCoffee" replace />} />
+            <Route path="hotCoffee" element={<MainFood />} />
+            <Route path="cake" element={<Appetizer />} />
+            <Route path="milkShake" element={<Dessert />} />
+            <Route path="Beverage" element={<Drink />} />
           </Route>
           <Route path="/food-details/:id" element={<Fooddetails />} />
           <Route path="/franchise" element={<Franchise />} />

@@ -1,5 +1,4 @@
 import React from "react";
-import Loading from "../../ui/Loading";
 import useDessert from "./useDessert";
 import Filter from "./Filter";
 import Section from "./Section";
@@ -7,19 +6,19 @@ import FoodLoadingSkeleton from "../../ui/FoodLoadingSkeleton";
 
 const dessertGroup = [
   {
-    text: "همه",
+    text: "All",
     foodGroup: "all",
     url: "",
     id: 1,
   },
   {
-    text: "کیک",
-    foodGroup: "cake",
-    url: "?foodGroup=cake",
+    text: "Milk Shake",
+    foodGroup: "milkShake",
+    url: "?foodGroup=milkShake",
     id: 2,
   },
   {
-    text: "بستنی",
+    text: "Ice Cream",
     foodGroup: "iceCream",
     url: "?foodGroup=iceCream",
     id: 3,

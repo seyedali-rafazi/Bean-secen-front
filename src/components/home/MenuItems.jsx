@@ -1,34 +1,33 @@
-import React, { useState } from "react";
+import React from "react";
 import { CiSearch } from "react-icons/ci";
-import { NavLink, useNavigate, useSearchParams } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useSearchMenu } from "../../context/SearchContext";
 
 const menuFoods = [
   {
     foodItemName: "Hot Coffee",
     foodItemPhoto: "/styles/hot-coffee.png",
-    pathName: "/branch-menu/mainfood",
+    pathName: "/branch-menu/hotCoffee",
   },
   {
     foodItemName: "Cake",
     foodItemPhoto: "/styles/cake.png",
-    pathName: "/branch-menu/Appetizer",
+    pathName: "/branch-menu/cake",
   },
   {
     foodItemName: "Milk Shake",
     foodItemPhoto: "/styles/milk-shake.png",
-    pathName: "/branch-menu/dessert",
+    pathName: "/branch-menu/milkShake",
   },
   {
-    foodItemName: "Drinks",
+    foodItemName: "Beverage",
     foodItemPhoto: "/styles/mohito.png",
-    pathName: "/branch-menu/drink",
+    pathName: "/branch-menu/Beverage",
   },
 ];
 
 function MenuItems() {
-  const { searchParams, setSearchParams, searchQuery, setSearchQuery } =
-    useSearchMenu();
+  const { setSearchParams, searchQuery, setSearchQuery } = useSearchMenu();
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -47,7 +46,7 @@ function MenuItems() {
         <input
           className="w-full "
           type="text"
-          placeholder="جست و جو"
+          placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

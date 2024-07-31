@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from "./Modal";
 import { useForm } from "react-hook-form";
 import TextField from "./TextField";
@@ -12,19 +12,16 @@ import { CiSearch } from "react-icons/ci";
 export default function NavbarIcons({ user }) {
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  const [openSearch, setOpenSeach] = useState(false);
-  const [activeButton, setActiveButton] = useState(null);
+  const [openSearch, setOpenSearch] = useState(false);
   const {
     register,
     handleSubmit,
-    watch,
     reset,
     formState: { errors },
   } = useForm();
-  const { isCreating, createUser } = useAuth();
+  const { createUser } = useAuth();
   const navigate = useNavigate();
-  const { searchParams, setSearchParams, searchQuery, setSearchQuery } =
-    useSearchMenu();
+  const { setSearchParams, searchQuery, setSearchQuery } = useSearchMenu();
 
   const handleSubmitmenu = (event) => {
     event.preventDefault();
@@ -68,7 +65,7 @@ export default function NavbarIcons({ user }) {
     <div className="flex gap-2 ">
       <button
         className={`${DisableButon} hidden lg:block`}
-        onClick={() => setOpenSeach(true)}
+        onClick={() => setOpenSearch(true)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -173,8 +170,8 @@ export default function NavbarIcons({ user }) {
 
       <Modal
         open={openSearch}
-        onClose={() => setOpenSeach(false)}
-        logo="جست و جو"
+        onClose={() => setOpenSearch(false)}
+        logo="Search"
       >
         <form
           onSubmit={handleSubmitmenu}
@@ -183,7 +180,7 @@ export default function NavbarIcons({ user }) {
           <input
             className="w-full "
             type="text"
-            placeholder="جست و جو"
+            placeholder="Search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />

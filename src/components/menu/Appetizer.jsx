@@ -1,27 +1,26 @@
 import React from "react";
 import useApptizer from "./useApptizer";
-import Loading from "../../ui/Loading";
 import Filter from "./Filter";
 import Section from "./Section";
 import FoodLoadingSkeleton from "../../ui/FoodLoadingSkeleton";
 
 const apptizerGroup = [
   {
-    text: "همه",
+    text: "All",
     foodGroup: "all",
     url: "",
     id: 1,
   },
   {
-    text: "پیش غذا",
-    foodGroup: "specialApptizer",
-    url: "?foodGroup=specialApptizer",
+    text: "Cake",
+    foodGroup: "cake",
+    url: "?foodGroup=cake",
     id: 2,
   },
   {
-    text: "سوپ ",
-    foodGroup: "soup",
-    url: "?foodGroup=soup",
+    text: "Cheese Cake",
+    foodGroup: "cheeseCake",
+    url: "?foodGroup=cheeseCake",
     id: 3,
   },
 ];

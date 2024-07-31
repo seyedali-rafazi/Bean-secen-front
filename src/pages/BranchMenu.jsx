@@ -8,10 +8,10 @@ function BranchMenu() {
     <MenuLayout>
       <BranchBar>
         <div className="container xl:max-w-[1640px] flex gap-4 justify-center items-center lg:justify-start">
-          <NavbarOption path="mainfood">غذای اصلی</NavbarOption>
-          <NavbarOption path="Appetizer">پیش غذا</NavbarOption>
-          <NavbarOption path="dessert">دسر</NavbarOption>
-          <NavbarOption path="drink">نوشیدنی</NavbarOption>
+          <NavbarOption path="hotCoffee">Hot Coffee</NavbarOption>
+          <NavbarOption path="cake">Cake</NavbarOption>
+          <NavbarOption path="milkShake">Milk Shake</NavbarOption>
+          <NavbarOption path="Beverage">Beverage</NavbarOption>
         </div>
       </BranchBar>
     </MenuLayout>

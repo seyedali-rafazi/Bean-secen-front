@@ -14,11 +14,12 @@ function SearchInput() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex px-3 py-2 justify-between items-center border border-secondery-400 rounded-lg w-full">
+      className="flex px-3 py-2 justify-between items-center border border-secondery-400 rounded-lg w-full"
+    >
       <input
         className="w-full "
         type="text"
-        placeholder="جست و جو"
+        placeholder=""
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
       />
