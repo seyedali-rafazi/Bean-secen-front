@@ -10,7 +10,7 @@ function UserDescription() {
         type="text"
         id="ourMessage"
         autoComplete="off"
-        placeholder="توضیحات شما (اختیاری)"
+        placeholder="Your description (optional)"
         className="w-full placeholder:text-secondery-400 mt-2 h-[141px]"
       />
     </div>

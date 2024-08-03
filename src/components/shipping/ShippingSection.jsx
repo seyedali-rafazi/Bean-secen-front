@@ -17,12 +17,13 @@ function ShippingSection({ products, user }) {
       </div>
       <InformationSection products={products} shippingPrice="0">
         <button
-          onClick={() => navigate("/payment" , { replace: true })}
-          className="flex h-12 w-full justify-center items-center text-secondery-50 bg-primary p-2 rounded-md">
+          onClick={() => navigate("/payment", { replace: true })}
+          className="flex h-12 w-full justify-center items-center text-secondery-50 bg-primary p-2 rounded-md"
+        >
           <span>
             <TiTick className="w-6 h-6" />
           </span>
-          <p className="p-2"> ثبت سفارش</p>
+          <p className="p-2"> Place an order</p>
         </button>
       </InformationSection>
     </div>

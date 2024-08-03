@@ -1,5 +1,3 @@
-import React from "react";
-import { toPersianNumbers } from "../../utils/FormatNumber";
 import useAddToCard from "../../feachers/food/addToCart";
 import { LoadingBars } from "../../ui/Loading";
 import useRemoveOneCard from "../../feachers/food/removeFromCard";
@@ -21,7 +19,7 @@ function ModifyQuantity({ quantity, id }) {
         {addLoading || removeLoading ? (
           <LoadingBars width={"20"} />
         ) : (
-          toPersianNumbers(quantity)
+          quantity
         )}
       </span>
       <button onClick={handelMinus}>

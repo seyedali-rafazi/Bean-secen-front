@@ -25,7 +25,7 @@ function EditDashboard() {
   const onCkickSubmit = (data) => {
     updateUser(data, {
       onSuccess: () => {
-        toast.success("داشبورد شما با موفقیت بروزرسانی شد");
+        toast.success("Your dashboard has been updated successfully");
       },
     });
   };
@@ -40,7 +40,7 @@ function EditDashboard() {
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg">پروفایل من </p>
+      <p className="flex justify-start w-full font-bold text-lg"> My profile</p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
       <form
         className="flex flex-col gap-10 items-center justify-center h-full w-full"
@@ -49,7 +49,7 @@ function EditDashboard() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 ">
           <TextField
             className="textField"
-            placeholder=" نام  و نام خانوادگی:"
+            placeholder="First name and Last name:"
             errors={errors}
             name="name"
             type="text"
@@ -57,12 +57,12 @@ function EditDashboard() {
             onChange={(v) => setUsername(v.target.value)}
             register={register}
             validationSchema={{
-              required: "نام  و نام خانوادگی  ضروری است",
+              required: "Name and surname are necessary",
             }}
           />
           <TextField
             className="textField"
-            placeholder=" ایمیل:"
+            placeholder="Email:"
             errors={errors}
             name="email"
             type="text"
@@ -70,10 +70,10 @@ function EditDashboard() {
             value={email}
             onChange={(v) => setEmail(v.target.value)}
             validationSchema={{
-              required: "ایمیل  همراه ضروری است",
+              required: "Email attached is required",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "ایمیل نامعتبر است",
+                message: "Email is invalid",
               },
             }}
           />
@@ -81,7 +81,7 @@ function EditDashboard() {
         {isUpdating ? (
           <button
             type="submit"
-            className="col-start-1 mx-auto border-2 border-tint-600  bg-secondery-50 rounded-md flex  justify-center items-center gap-2 px-5 py-2 min-w-48"
+            className="col-start-1 mx-auto border-2 border-primary bg-secondery-50 rounded-md flex  justify-center items-center gap-2 px-5 py-2 min-w-48"
           >
             <span className="text-xs">
               <LoadingBars width="24" />
@@ -90,10 +90,10 @@ function EditDashboard() {
         ) : (
           <button
             type="submit"
-            className="col-start-1 mx-auto border-2 border-tint-600  font-bold text-primary bg-secondery-50 py-2 rounded-md flex  justify-center items-center gap-2 hover:bg-primary hover:text-secondery-50 duration-300 px-5"
+            className="col-start-1 mx-auto border-2 border-primary font-bold text-primary bg-secondery-50 py-2 rounded-md flex  justify-center items-center gap-2 hover:bg-primary hover:text-secondery-50 duration-300 px-5"
           >
             <PiPencilSimpleLine className="w-6 h-6" />
-            <span className="text-xs">ویرایش اطلاعات شخصی</span>
+            <span className="text-xs font-bold"> Edit personal information</span>
           </button>
         )}
       </form>

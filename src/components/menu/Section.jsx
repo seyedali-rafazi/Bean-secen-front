@@ -1,9 +1,4 @@
-import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
-import {
-  toPersianNumbers,
-  toPersianNumbersWithComma,
-} from "../../utils/FormatNumber";
 import { truncateText } from "../../utils/truncateText";
 import LikeFood from "../../ui/LikeFood";
 import { OrderButton } from "../../ui/Button";
@@ -19,11 +14,17 @@ function Section({ foods }) {
             className="border rounded-lg border-rose-100 flex min-h-36"
           >
             <Link to={`/food-details/${food._id}`} className="rounded-r-lg">
-              <img
-                className="min-w-28 h-full w-full rounded-r-lg"
-                src={food.imageLink}
-                alt={food.title}
-              />
+              <div className="relative w-32 h-full bg-cover rounded-lg">
+                <img
+                  role="presentation"
+                  onError={(e) => {
+                    e.currentTarget.src = "/styles/gingerbread-cappuccino.webp";
+                  }}
+                  className="absolute inset-0 w-full h-full object-cover rounded-tl-lg rounded-bl-lg"
+                  src={food.imageLink}
+                  alt={food.title}
+                />
+              </div>
             </Link>
             <div className="flex flex-col justify-between gap-2 p-2 w-full">
               <div className="flex gap-2 justify-between items-center sm:flex-col">
@@ -42,32 +43,26 @@ function Section({ foods }) {
                   </p>
                   <div className="flex flex-col">
                     <div className="flex justify-between items-center gap-2">
-                      <span className="text-sm text-secondery-600">
-                        {food.discount == 0 ? (
-                          ""
-                        ) : (
-                          <s>{toPersianNumbersWithComma(food.price)}</s>
-                        )}
+                      <span className="text-xl text-secondery-600">
+                        {food.discount == 0 ? "" : <s>{food.price}</s>}
                       </span>
                       <span
                         className={`${
                           food.discount == 0
                             ? ""
                             : "bg-rose-200 text-rose-500 px-1 py-0.5 rounded-full text-sm"
-                        }`}
+                        } text-lg`}
                       >
                         {food.discount == 0 ? (
                           ""
                         ) : (
-                          <span>{toPersianNumbers(food.discount)}%</span>
+                          <span>{food.discount}%</span>
                         )}
                       </span>
                     </div>
-                    <span>
-                      {food.offPrice == 0
-                        ? toPersianNumbersWithComma(food.price)
-                        : toPersianNumbersWithComma(food.offPrice)}
-                      &nbsp;تومان
+                    <span className="font-bold text-xl">
+                      {food.offPrice == 0 ? food.price : food.offPrice}
+                      &nbsp;$
                     </span>
                   </div>
                 </div>

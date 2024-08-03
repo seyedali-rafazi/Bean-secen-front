@@ -1,6 +1,5 @@
 import React from "react";
 import ModifyInformation from "./ModifyInformation";
-import { FaChevronLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import ModifyList from "../../ui/ModifyList";
 
@@ -14,11 +13,9 @@ function OrderSection({ products }) {
       <ModifyInformation products={products}>
         <button
           onClick={() => navigate("/shipping")}
-          className="flex h-12 w-full justify-center items-center text-secondery-50 bg-primary p-2 rounded-md">
-          <p>تکمیل اطلاعات</p>
-          <span>
-            <FaChevronLeft className="w-6 h-6" />
-          </span>
+          className="flex font-semibold h-12 w-full justify-center items-center text-secondery-50 bg-primary p-2 rounded-md"
+        >
+          <p>Completing information</p>
         </button>
       </ModifyInformation>
     </div>

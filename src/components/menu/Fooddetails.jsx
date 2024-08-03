@@ -4,7 +4,6 @@ import useFoodById from "./useFoodById";
 import Footer from "../../ui/Footer";
 import { FaArrowRight, FaStar } from "react-icons/fa6";
 import LikeFood from "../../ui/LikeFood";
-import { toPersianNumbersWithComma } from "../../utils/FormatNumber";
 import { OrderButton } from "../../ui/Button";
 import Loading from "../../ui/Loading";
 
@@ -62,7 +61,7 @@ function Fooddetails() {
               </div>
               <div className="flex justify-between items-center py-3">
                 <p className="font-bold text-secondery-600">قیمت</p>
-                <p>{toPersianNumbersWithComma(product.offPrice)}&nbsp;تومن</p>
+                <p>{product.offPrice}&nbsp;$</p>
               </div>
             </div>
             <div className="flex justify-end">

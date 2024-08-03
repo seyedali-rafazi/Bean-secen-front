@@ -1,24 +1,23 @@
 import React from "react";
 import useAddToCard from "../feachers/food/addToCart";
-import Loading from "./Loading";
 import useUser from "../feachers/authentication/useUser";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 export function OrderButton({ id }) {
   const { addFood, isPending } = useAddToCard();
-  const { isLoading, user } = useUser();
+  const { user } = useUser();
   const navigate = useNavigate();
   const handleClick = (productId) => {
     addFood(productId);
   };
 
   const handelExistProduct = () => {
-    navigate("/dashboard/user-orders");
+    navigate("/cart");
   };
 
   const handelUser = () => {
-    toast.error("وارد حساب کاربری خود شوید");
+    toast.error("Login to your account");
   };
 
   if (isPending) {
@@ -35,7 +34,7 @@ export function OrderButton({ id }) {
         onClick={handelUser}
         className="text-xs bg-primary text-secondery-50 rounded-lg px-5 py-2 w-28 sm:text-sm md:text-md md:w-48"
       >
-        <p>افزودن</p>
+        <p>Add To Card</p>
       </button>
     );
   }
@@ -46,7 +45,7 @@ export function OrderButton({ id }) {
         onClick={() => handleClick(id)}
         className="text-xs bg-primary text-secondery-50 rounded-lg px-5 py-2 w-28 sm:text-sm md:text-md md:w-48"
       >
-        <p>افزودن</p>
+        <p>Add To Card</p>
       </button>
     );
   }
@@ -54,9 +53,9 @@ export function OrderButton({ id }) {
     return (
       <button
         onClick={handelExistProduct}
-        className="text-xs  bg-secondery-50 text-primary rounded-lg px-1 py-2 w-28 border border-primary md:text-sm md:text-md md:w-48"
+        className="text-xs font-semibold  bg-secondery-50 text-primary rounded-lg px-1 py-2 w-28 border border-primary md:text-sm md:text-md md:w-48"
       >
-        <p>مشاهده سبد خرید</p>
+        <p>View Your Cart</p>
       </button>
     );
   }
@@ -66,7 +65,7 @@ export function OrderButton({ id }) {
       onClick={() => handleClick(id)}
       className="text-xs bg-primary text-secondery-50 rounded-lg px-5 py-2 w-28 sm:text-sm md:text-md md:w-48"
     >
-      <p>افزودن</p>
+      <p>Add To Card</p>
     </button>
   );
 }

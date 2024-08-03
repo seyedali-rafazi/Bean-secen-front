@@ -1,7 +1,5 @@
 import React from "react";
-import gregorianToPersian from "../../../utils/MonthFormater";
 import { calender, tinyLocationIcon } from "../../../icons/dashboard-icon";
-import { toPersianNumbersWithComma } from "../../../utils/FormatNumber";
 import { totalOffAmount, totalPrice } from "../../../utils/Prices";
 import UserOrderStatue from "./UserOrderStatue";
 
@@ -12,44 +10,41 @@ function OrderStatue({ payments }) {
       key={payment._id}
     >
       <div className="flex justify-between items-center ">
-        <h2 className="text-secondery-600">شعبه اقدسیه</h2>
+        <h2 className="text-secondery-600">Milan branch</h2>
         <p className="text-sm p-2 rounded-md bg-rose-100 text-primary md:text-lg">
           {payment.status == "COMPLETED"
-            ? "پرداخت موفقیت آمیز"
-            : "پرداخت ناموفق"}
+            ? "Successful payment"
+            : "payment failed"}
         </p>
       </div>
       <div className="flex flex-col gap-2 justify-start items-start w-full">
         <div className="flex flex-col gap-2 text-xs text-secondery-600">
           <div className="flex gap-1">
             <span>{calender}</span>
-            <span>{gregorianToPersian(payment.createdAt)}</span>
           </div>
           <div>
-            <span>مبلغ: </span>
-            <span>
-              {toPersianNumbersWithComma(
-                totalPrice(payment.cart.productDetail)
-              )}
-              &nbsp;تومان &nbsp;تومان
+            <span>Amount:</span>
+            <span className="text-xl">
+              {totalPrice(payment.cart.productDetail)}
+              &nbsp;$
             </span>
           </div>
           <div>
-            <span>تخفیف: </span>
-            <span>
-              {toPersianNumbersWithComma(
-                totalOffAmount(payment.cart.productDetail)
-              )}
-              &nbsp;تومان
+            <span>Discount: </span>
+            <span className="text-xl">
+              {totalOffAmount(payment.cart.productDetail)}
+              &nbsp;$
             </span>
           </div>
         </div>
         <p className="text-xs text-secondery-600 flex gap-1">
           <span>{tinyLocationIcon}</span>
-          <span>اقدسیه٬شمیرانات٬متجمع شمیران</span>
+          <span>Milan, Shemiranat, Shemiran meeting</span>
         </p>
       </div>
-      <UserOrderStatue orders={payment.cart.productDetail} />
+      <div>
+        <UserOrderStatue orders={payment.cart.productDetail} />
+      </div>
     </div>
   ));
 }

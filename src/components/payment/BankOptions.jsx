@@ -26,7 +26,7 @@ function BankOptions() {
     <div className="flex flex-col lg:flex-row gap-4 lg:gap-0 whitespace-nowrap justify-start border border-secondery-400 rounded-lg p-10">
       <div className="flex border-b py-3 border-secondery-400 lg:border-b-0  lg:py-0 gap-2">
         <span>{cartBank}</span>
-        <p>درگاه پرداخت</p>
+        <p>Payment Gateway</p>
       </div>
       <div className="flex flex-col gap-2 justify-center items-center w-full">
         <div className="flex gap-2">
@@ -48,10 +48,9 @@ function BankOptions() {
           ))}
         </div>
         <p className="text-center text-xs md:text-sm whitespace-normal text-secondery-500">
-          پرداخت از طریق کلیه کارت‌های عضو شتاب امکان‌پذیر است.‌
-          <br />
+          Payment is possible through all Shatab member cards <br />
           <span className="text-xs">
-            (لطفا قبل از پرداخت فیلترشکن خود را خاموش کنید.)
+            (Please turn off your blocker before paying.)
           </span>
         </p>
       </div>

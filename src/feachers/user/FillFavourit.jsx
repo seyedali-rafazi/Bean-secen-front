@@ -1,7 +1,6 @@
 import React from "react";
 import LikeFood from "../../ui/LikeFood";
 import { FaStar } from "react-icons/fa";
-import { toPersianNumbersWithComma } from "../../utils/FormatNumber";
 import { OrderButton } from "../../ui/Button";
 
 function FillFavourit({ favourits }) {
@@ -32,9 +31,9 @@ function FillFavourit({ favourits }) {
               </div>
               <div className="w-full text-left">
                 {favourit.offPrice == 0
-                  ? toPersianNumbersWithComma(favourit.price)
-                  : toPersianNumbersWithComma(favourit.offPrice)}
-                &nbsp;تومان
+                  ? favourit.price
+                  : favourit.offPrice}
+                &nbsp;$
               </div>
             </div>
             <div className="flex justify-center">

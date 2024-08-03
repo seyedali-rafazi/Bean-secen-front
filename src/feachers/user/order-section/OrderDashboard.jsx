@@ -13,17 +13,17 @@ function OrderDashboard() {
   return isLoading ? (
     <PanelSceleton />
   ) : (
-    <div className="flex flex-col w-full items-center gap-5 border border-secondery-500 rounded-lg p-2">
+    <div className="flex flex-col w-full items-center gap-5 border border-secondery-500 rounded-lg p-5">
       <button
         onClick={() => navigate(-1)}
         className="lg:hidden flex justify-start w-full"
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg">سفارشات </p>
+      <p className="flex justify-start w-full font-bold text-lg">Orders </p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
       {payments.length == 0 ? (
-        <EmptySection text="شما در حال حاضر هیچ سفارشی ثبت نکرده اید !" />
+        <EmptySection text="You have not registered any order yet!" />
       ) : (
         <OrderStatue payments={payments} />
       )}

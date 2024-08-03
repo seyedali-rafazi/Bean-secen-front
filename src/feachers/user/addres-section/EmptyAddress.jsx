@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "../../../ui/Modal";
 import TextField from "../../../ui/TextField";
-import { emptyPage } from "../../../icons/dashboard-icon";
 import { useForm } from "react-hook-form";
 
 function EmptyAddress({ setOpen, open, onCkickSubmitAddress }) {
@@ -17,32 +16,35 @@ function EmptyAddress({ setOpen, open, onCkickSubmitAddress }) {
       <div className="bg-cover bg-hero-pattern bg-center h-full w-full mx-auto">
         <div className="flex flex-col justify-center items-center gap-8 h-full w-full">
           <p className="font-semibold text-secondery-600 text-center w-full">
-            شما در حال حاضر هیچ آدرسی ثبت نکرده اید !
+            You have not registered any address yet!
           </p>
           <button
             onClick={() => setOpen(true)}
-            className="border-2 font-semibold border-primary text-primary hover:bg-primary hover:text-secondery-50 duration-300 rounded-md px-10 py-2 w-1/3 min-w-48">
-            افزودن آدرس
+            className="border-2 font-semibold border-primary text-primary hover:bg-primary hover:text-secondery-50 duration-300 rounded-md px-10 py-2 w-1/3 min-w-48"
+          >
+            Add address
           </button>
-          <Modal logo=" آدرس" open={open} onClose={() => setOpen(false)}>
+          <Modal logo="Address" open={open} onClose={() => setOpen(false)}>
             <form
               className="w-full space-y-4"
-              onSubmit={handleSubmit(onCkickSubmitAddress)}>
+              onSubmit={handleSubmit(onCkickSubmitAddress)}
+            >
               <TextField
                 className="textField"
-                placeholder="  آدرس:"
+                placeholder="Address:"
                 errors={errors}
                 name="address"
                 type="text"
                 register={register}
                 validationSchema={{
-                  required: "  آدرس ضروری است",
+                  required: "Address is required",
                 }}
               />
               <button
                 type="submit"
-                className="w-full font-bold text-slate-50 bg-primary py-2 rounded-md">
-                افزودن
+                className="w-full font-bold text-slate-50 bg-primary py-2 rounded-md"
+              >
+                Add
               </button>
             </form>
           </Modal>

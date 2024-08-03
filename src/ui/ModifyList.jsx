@@ -4,13 +4,9 @@ import ModifyQuantity from "../components/cart/ModifyQuantity";
 import { GoTrash } from "react-icons/go";
 import useDeletFromCart from "../feachers/food/deleteFromCart";
 import { truncateText } from "../utils/truncateText";
-import {
-  toPersianNumbers,
-  toPersianNumbersWithComma,
-} from "../utils/FormatNumber";
 
 function ModifyList({ products }) {
-  const { deleteFood, isPending } = useDeletFromCart();
+  const { deleteFood } = useDeletFromCart();
   const handelDelete = (productId) => {
     const data = {
       productId: productId,
@@ -23,23 +19,33 @@ function ModifyList({ products }) {
       {products?.map((product) => (
         <div
           key={product._id}
-          className="border border-secondery-400 rounded-lg">
+          className="border border-secondery-400 rounded-lg"
+        >
           <div className="flex gap-2 w-full">
             <div className="hidden md:block">
-              <img className="h-full" src={product.imageLink} alt="" />
+              <div className="relative w-32 h-full bg-cover rounded-lg">
+                <img
+                  role="presentation"
+                  onError={(e) => {
+                    e.currentTarget.src = "/styles/gingerbread-cappuccino.webp";
+                  }}
+                  className="absolute inset-0 w-full h-full object-cover rounded-tl-lg rounded-bl-lg"
+                  src={product.imageLink}
+                  alt={product.title}
+                />
+              </div>
             </div>
             <div className="w-full flex md:flex-col justify-between gap-2 p-3">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full">
                 <p className="font-semibold text-lg">{product.title}</p>
                 <span className="font-normal text-sm text-secondery-600 md:hidden">
-                  {toPersianNumbers(
-                    product.discount == 0 ? product.price : product.offPrice
-                  )}
-                  &nbsp;تومان
+                  {product.discount == 0 ? product.price : product.offPrice}
+                  &nbsp;$
                 </span>
                 <button
                   className="hidden md:block"
-                  onClick={() => handelDelete(product._id)}>
+                  onClick={() => handelDelete(product._id)}
+                >
                   <GoTrash className="w-6 h-6" />
                 </button>
               </div>
@@ -52,14 +58,14 @@ function ModifyList({ products }) {
                     ""
                   ) : (
                     <s className="text-sm text-secondery-600 hidden md:block">
-                      {toPersianNumbersWithComma(product.price)}
+                      {product.price}
                     </s>
                   )}
                   {product.discount == 0 ? (
                     ""
                   ) : (
                     <span className="bg-rose-200 text-rose-500 px-1 py-0.5 rounded-full text-sm hidden md:block">
-                      %{toPersianNumbers(product.discount)}
+                      %{product.discount}
                     </span>
                   )}
                 </div>
@@ -77,10 +83,10 @@ function ModifyList({ products }) {
                   />
                 </div>
                 <span className="hidden md:block md:font-semibold md:text-lg md:text-secondery-800">
-                  {toPersianNumbers(
+                  {
                     product.discount == 0 ? product.price : product.offPrice
-                  )}
-                  &nbsp;تومان
+                  }
+                  &nbsp;$
                 </span>
               </div>
             </div>

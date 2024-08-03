@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { toPersianNumbers } from "../../utils/FormatNumber";
 import NavbarOption from "../../ui/NavbarOption";
 import {
   likeSolidIcon,
@@ -32,13 +31,13 @@ function SidebarLayout() {
             <div className="w-14 h-14 rounded-full">
               <img
                 src={user.avatarUrl ? user.avatarUrl : "/styles/avatar.png"}
-                alt="عکس کاربر"
+                alt="User personalImage"
               />
             </div>
             <div className="flex flex-col gap-1">
-              <span> {user.name ? user.name : "کاربر ترخینه"}</span>
+              <span> {user.name ? user.name : "Tarkhina user"}</span>
               <span className="text-sm text-secondery-500">
-                {toPersianNumbers(user.phoneNumber)}
+                {user.phoneNumber}
               </span>
             </div>
           </div>
@@ -46,27 +45,27 @@ function SidebarLayout() {
         <span className="w-full block h-0.5 bg-secondery-500 rounded-full "></span>
         <div className="flex flex-col">
           <NavbarOption path="/dashboard/profile">
-            <div className="flex items-center gap-2 py-3\2">
+            <div className="flex items-center gap-2 ">
               <span>{userSolidIcon}</span>
-              <p>پروفایل</p>
+              <p>Profile</p>
             </div>
           </NavbarOption>
           <NavbarOption path="/dashboard/user-orders">
             <div className="flex items-center gap-2 py-2 ">
               <span>{walletSolidIcon}</span>
-              <p>پیگیری سفارشات</p>
+              <p>Tracking orders</p>
             </div>
           </NavbarOption>
           <NavbarOption path="/dashboard/user-favourits">
             <div className="flex items-center gap-2 py-2">
               <span>{likeSolidIcon}</span>
-              <p>علاقه مندی ها</p>
+              <p>Interests</p>
             </div>
           </NavbarOption>
           <NavbarOption path="/dashboard/user-address">
             <div className="flex items-center gap-2 py-2">
               <span>{locationSolidIcon}</span>
-              <p>آدرس های من</p>
+              <p>My addresses</p>
             </div>
           </NavbarOption>
           <button
@@ -76,7 +75,7 @@ function SidebarLayout() {
             <span>
               <TbLogout className="w-6 h-6 text-error-200" />
             </span>
-            <p className="font-semibold text-error-200">خروج</p>
+            <p className="font-semibold text-error-200">Exit</p>
           </button>
           <Exist open={open} onClose={() => setOpen(false)} />
         </div>

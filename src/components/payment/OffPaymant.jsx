@@ -11,7 +11,7 @@ function OffPaymant() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { addCoupon, isPending } = useAddOff();
+  const { addCoupon } = useAddOff();
 
   const onCkickSubmit = (data) => {
     addCoupon(data);
@@ -21,7 +21,7 @@ function OffPaymant() {
     <div className="flex flex-col lg:flex-row gap-4 justify-evenly items-center border border-secondery-400 rounded-lg px-3 py-5">
       <div className="flex border-b border-secondery-400 py-3 gap-2 w-full lg:border-b-0 lg:py-0 lg:w-1/3">
         <span className="text-secondery-500">{offIcon}</span>
-        <p>ثبت کد تخفیف</p>
+        <p>Register discount code</p>
       </div>
       <form
         className="flex gap-2 items-center justify-center h-full w-full md:w-2/4"
@@ -30,7 +30,7 @@ function OffPaymant() {
         <div className="textField ">
           <TextField
             className="w-full"
-            placeholder=" کد تخفیف"
+            placeholder="Discount code"
             errors={errors}
             name="couponCode"
             type="text"
@@ -41,14 +41,14 @@ function OffPaymant() {
         </div>
         {off == "" ? (
           <button className="border  font-bold text-secondery-50 bg-secondery-400  rounded-sm cursor-not-allowed w-auto whitespace-nowrap px-5 py-2">
-            ثبت کد
+            Register the code
           </button>
         ) : (
           <button
             type="submit"
             className="border border-tint-600  font-bold text-primary bg-secondery-50  rounded-sm  hover:bg-primary hover:text-secondery-50 duration-300 w-auto whitespace-nowrap px-5 py-2"
           >
-            ثبت کد
+            Register the code
           </button>
         )}
       </form>

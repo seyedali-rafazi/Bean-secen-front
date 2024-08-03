@@ -8,10 +8,10 @@ import PaymentPortal from "./PaymentPortal";
 import { TiTick } from "react-icons/ti";
 import useCreatePayment from "../../feachers/payment/useCreatePayment";
 
-function PaymentSection({ products, user }) {
+function PaymentSection({ products }) {
   const [paymentOption, setPaymentOption] = useState("bank");
   const navigate = useNavigate();
-  const { createPayment, isPending } = useCreatePayment();
+  const { createPayment } = useCreatePayment();
   const handelPaymentCick = () => {
     createPayment();
     navigate("/successful-payment", { replace: true });
@@ -36,14 +36,14 @@ function PaymentSection({ products, user }) {
               <span>
                 <MdOutlinePayment className="w-6 h-6" />
               </span>
-              <p>تأیید و پرداخت</p>
+              <p>Confirmation and payment</p>
             </div>
           ) : (
             <div className="flex gap-2">
               <span>
                 <TiTick className="w-6 h-6" />
               </span>
-              <p>ثبت سفارش</p>
+              <p>order registration</p>
             </div>
           )}
         </button>

@@ -5,7 +5,6 @@ function SuccessfulPayment() {
   const navigate = useNavigate();
 
   const handleNavigate = (url) => {
-    // Replace the current entry in the history stack
     navigate(url, { replace: true });
   };
 
@@ -19,24 +18,24 @@ function SuccessfulPayment() {
         />
         <div className="flex flex-col gap-3 items-center justify-center">
           <p className="font-bold text-xl md:text-2xl lg:text-5xl text-primary">
-            پرداخت شما با موفقیت انجام شد!
+            Your payment has been successfully completed!
           </p>
           <p className="text-primary text-sm lg:text-lg">
-            کد رهگیری سفارش شما: ۶۲,۰۴۵
+            Your order tracking code: 62,045
           </p>
         </div>
         <div className="flex items-center justify-center gap-3">
           <button
-            onClick={() => handleNavigate("/") }
+            onClick={() => handleNavigate("/")}
             className="border rounded-md text-primary p-2 text-sm w-[150px] md:w-[215px] md:p-3"
           >
-            بازشگت به صفحه اصلی
+            Return to main page
           </button>
           <button
             onClick={() => handleNavigate("/dashboard/user-orders")}
             className="border rounded-md text-secondery-50 bg-primary p-2 text-sm w-[150px] md:w-[215px] md:p-3"
           >
-            پیگیری سفارش
+            Order tracking
           </button>
         </div>
       </div>

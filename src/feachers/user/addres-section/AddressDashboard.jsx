@@ -12,13 +12,13 @@ function AddressDashboard() {
   const { isLoading, user } = useUser();
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
-  const { isUpdating, updateUser } = useUpdateUser();
+  const { updateUser } = useUpdateUser();
 
 
   const onCkickSubmitAddress = (data) => {
     updateUser(data, {
       onSuccess: () => {
-        toast.success("آدرس شما با موفقیت بروزرسانی شد");
+        toast.success("Your address has been updated successfully");
         setOpen(false);
       },
     });
@@ -34,7 +34,7 @@ function AddressDashboard() {
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg">آدرس ها </p>
+      <p className="flex justify-start w-full font-bold text-lg">Addresses</p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
 
       {user.address == null ? (
