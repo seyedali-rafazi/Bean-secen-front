@@ -57,7 +57,7 @@ export default function NavbarIcons({ user }) {
   };
 
   // styles
-  const ActiveUrlButton = "p-2 duration-300 rounded-lg bg-tint-700 text-white";
+  const ActiveUrlButton = "p-2 duration-300 rounded-lg  text-white";
   const DisableButon =
     "p-2 duration-300 rounded-lg bg-secondery-300 text-tint-700 ";
 

@@ -3,7 +3,6 @@ import { FaChevronRight } from "react-icons/fa";
 import { GoTrash } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import EmptySection from "../../ui/EmptySection";
-import { paymentBanner } from "../../icons/PaymentIcon";
 import PaymentSection from "./PaymentSection";
 import useUser from "../../feachers/authentication/useUser";
 import Loading from "../../ui/Loading";
@@ -22,9 +21,7 @@ function PaymentStep() {
   return (
     <div className="flex flex-col justify-center items-center gap-4 my-5 w-full">
       <div className=" w-full p-5">
-        <div className="hidden md:flex text-primary justify-center">
-          {paymentBanner}
-        </div>
+
         <div className="flex justify-between md:hidden">
           <button onClick={() => navigate(-1)} className="text-secondery-500">
             <FaChevronRight />

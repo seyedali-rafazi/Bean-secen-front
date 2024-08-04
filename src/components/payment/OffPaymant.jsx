@@ -46,7 +46,7 @@ function OffPaymant() {
         ) : (
           <button
             type="submit"
-            className="border border-tint-600  font-bold text-primary bg-secondery-50  rounded-sm  hover:bg-primary hover:text-secondery-50 duration-300 w-auto whitespace-nowrap px-5 py-2"
+            className="border border-primary font-bold text-primary bg-secondery-50  rounded-sm  hover:bg-primary hover:text-secondery-50 duration-300 w-auto whitespace-nowrap px-5 py-2"
           >
             Register the code
           </button>

@@ -72,7 +72,7 @@ function FavoutritDashboard() {
                 onClick={() => handleClick(categoryGroup.category)}
                 className={`bg-rose-100 px-2 py-1.5 rounded-full flex items-center text-xs gap-2 text-secondery-600 ${
                   categoryGroup.url === location.search
-                    ? "bg-tint-100 text-tint-600 duration-300"
+                    ? "bg-tint-100 text-primary duration-300"
                     : ""
                 }`}
               >

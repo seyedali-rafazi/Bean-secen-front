@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import { GoTrash } from "react-icons/go";
 import EmptySection from "../../ui/EmptySection";
-import { shippingBaner } from "../../icons/ShippingIcon";
 import ShippingSection from "./ShippingSection";
 import useUser from "../../feachers/authentication/useUser";
 import Loading from "../../ui/Loading";
@@ -22,9 +21,6 @@ function ShippingStep() {
   return (
     <div className="flex flex-col justify-center items-center gap-4 my-5 w-full">
       <div className=" w-full p-5">
-        <div className="hidden md:flex text-primary justify-center">
-          {shippingBaner}
-        </div>
         <div className="flex justify-between md:hidden">
           <button onClick={() => navigate(-1)} className="text-secondery-500">
             <FaChevronRight />

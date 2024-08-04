@@ -1,5 +1,4 @@
 import React from "react";
-import { orderStep } from "../../icons/Cart-icons";
 import EmptySection from "../../ui/EmptySection";
 import { useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
@@ -14,9 +13,6 @@ function OrderStep() {
   return (
     <div className="flex flex-col justify-center items-center gap-4 my-5 w-full">
       <div className=" w-full p-5">
-        <div className="hidden md:flex text-primary justify-center">
-          {orderStep}
-        </div>
         <div className="flex justify-between md:hidden">
           <button onClick={() => navigate(-1)} className="text-secondery-500">
             <FaChevronRight />
