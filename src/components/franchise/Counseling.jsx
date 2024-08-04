@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import TextField from "../../ui/TextField";
-import { PiPencilSimpleLine } from "react-icons/pi";
 import DatePickerField from "../../ui/DatePickerField";
 
 function Counseling() {
@@ -15,8 +14,8 @@ function Counseling() {
     formState: { errors },
   } = useForm();
 
-  const onCkickSubmit = (data) => {
-    toast.success("  با موفقیت ارسال شد");
+  const onCkickSubmit = () => {
+    toast.success("Submitted successfully");
   };
   return (
     <div>

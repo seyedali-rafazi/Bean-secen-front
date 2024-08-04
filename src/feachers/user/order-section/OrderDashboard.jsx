@@ -20,7 +20,7 @@ function OrderDashboard() {
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg">Orders </p>
+      <p className="flex justify-start w-full font-bold text-lg">Orders</p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
       {payments.length == 0 ? (
         <EmptySection text="You have not registered any order yet!" />

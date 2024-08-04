@@ -2,7 +2,7 @@ import React from "react";
 import DatePicker from "react-multi-date-picker";
 
 
-function DatePickerField({ label, data, setDate }) {
+function DatePickerField({ data, setDate }) {
   return (
     <div className="border border-secondery-400 p-2 rounded-sm w-full">
       <DatePicker

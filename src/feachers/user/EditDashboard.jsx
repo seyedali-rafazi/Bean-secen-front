@@ -40,7 +40,7 @@ function EditDashboard() {
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg"> My profile</p>
+      <p className="flex justify-start w-full font-bold text-lg">My profile</p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
       <form
         className="flex flex-col gap-10 items-center justify-center h-full w-full"

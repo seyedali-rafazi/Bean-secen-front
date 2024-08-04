@@ -91,7 +91,6 @@ function ModifyList({ products }) {
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       ))}
     </div>

@@ -27,7 +27,6 @@ function ListLocation({ products }) {
               </div>
             </div>
           </div>
-          <div></div>
         </div>
       ))}
     </div>

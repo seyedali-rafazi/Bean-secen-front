@@ -9,21 +9,21 @@ function Exist({ open, onClose }) {
   };
 
   return (
-    <Modal logo=" خروج" open={open} onClose={onClose}>
+    <Modal logo="Exit" open={open} onClose={onClose}>
       <div className="flex flex-col w-full justify-center items-center gap-8 mt-5">
-        <p>آیا میخواهید خارج شوید؟</p>
+        <p className="font-semibold">Do you want to exit ?</p>
         <div className="flex gap-3">
           <button
             onClick={onClose}
             className="bg-primary font-bold  min-w-24 px-3 sm:px-16 py-2 text-secondery-50 rounded-lg"
           >
-            لغو
+            Cancell
           </button>
           <button
             onClick={handleLogout}
             className="bg-red-500 font-bold px-3 min-w-24 sm:px-16 py-2 text-secondery-50 rounded-lg"
           >
-            خروج
+            Exit
           </button>
         </div>
       </div>

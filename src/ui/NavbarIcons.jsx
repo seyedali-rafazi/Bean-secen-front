@@ -126,9 +126,9 @@ export default function NavbarIcons({ user }) {
 
       <Modal open={open} onClose={() => setOpen(false)} logo={baseLogo}>
         <div className="flex flex-col justify-center items-center gap-2 ">
-          <div>ورود / ثبت نام</div>
+          <div>Login/Register</div>
           <div className="text-secondery-500 text-xs">
-            لطفا شماره تلفن معتبر و رمز عبور را وارد کنید
+            Please enter a valid phone number and password
           </div>
           <form
             className="w-full space-y-4"
@@ -136,31 +136,31 @@ export default function NavbarIcons({ user }) {
           >
             <TextField
               className="textField"
-              placeholder="شماره تلفن:"
+              placeholder="Phone number:"
               errors={errors}
               name="phoneNumber"
               type="number"
               register={register}
               validationSchema={{
-                required: "تلفن همراه ضروری است",
+                required: "Mobile phone is essential",
               }}
             />
             <TextField
               className="textField"
-              placeholder=" رمز عبور:"
+              placeholder="Password:"
               errors={errors}
               name="password"
               type="text"
               register={register}
               validationSchema={{
-                required: "رمز عبور همراه ضروری است",
+                required: "Mobile password is required",
               }}
             />
             <button
               type="submit"
               className="w-full font-bold text-slate-50 bg-primary py-2 rounded-md"
             >
-              ثبت نام / ورود
+              Sign up / Log in
             </button>
           </form>
           <div></div>

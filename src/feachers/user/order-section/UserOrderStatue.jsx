@@ -33,10 +33,15 @@ function UserOrderStatue({ orders }) {
       >
         {orders.map((userOrder) => (
           <div className="w-full h-full" key={userOrder._id}>
-            <SwiperSlide className="flex flex-col border-2 border-secondery-200 rounded-xl h-full ">
+            <SwiperSlide className="flex flex-col border-2 border-secondery-200 rounded-xl  h-full ">
               <div className="relative w-full">
                 <div className="relative w-full h-32 bg-cover rounded-lg">
                   <img
+                    role="presentation"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "/styles/gingerbread-cappuccino.webp";
+                    }}
                     className="absolute inset-0 w-full h-full object-cover rounded-t-lg"
                     src={userOrder.imageLink}
                     alt=""
@@ -48,7 +53,7 @@ function UserOrderStatue({ orders }) {
                 </span>
               </div>
               <div className="flex flex-col justify-center items-center text-sm text-secondery-700 h-full">
-                <p>{userOrder.title}</p>
+                <p className="h-full">{userOrder.title}</p>
                 <p>{userOrder.offPrice}&nbsp;$</p>
               </div>
             </SwiperSlide>

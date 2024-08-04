@@ -32,6 +32,10 @@ function Fooddetails() {
         <div className="flex flex-col min-h-96 sm:flex-row justify-center items-center p-5 gap-5">
           <div className="w-48 sm:w-96 rounded-lg">
             <img
+              role="presentation"
+              onError={(e) => {
+                e.currentTarget.src = "/styles/gingerbread-cappuccino.webp";
+              }}
               className="w-full h-full rounded-lg object-cover object-center"
               src={product.imageLink}
               alt=""
@@ -46,13 +50,13 @@ function Fooddetails() {
             </div>
             <div className="flex flex-col border rounded-lg p-3">
               <div className="space-y-2 border-b-2 pb-3">
-                <p className="font-bold text-secondery-700">محتویات</p>
+                <p className="font-bold text-secondery-700">Contents</p>
                 <p className="text-xs text-secondery-600">
                   {product.description}
                 </p>
               </div>
               <div className="flex justify-between items-center py-3 border-b-2">
-                <p className="font-bold text-secondery-600">امتیاز</p>
+                <p className="font-bold text-secondery-600">Score</p>
                 <div className="flex gap-1 text-yellow-400">
                   {Array.from({ length: 5 }, (_, i) => (
                     <FaStar key={i} />
@@ -60,7 +64,7 @@ function Fooddetails() {
                 </div>
               </div>
               <div className="flex justify-between items-center py-3">
-                <p className="font-bold text-secondery-600">قیمت</p>
+                <p className="font-bold text-secondery-600">Price</p>
                 <p>{product.offPrice}&nbsp;$</p>
               </div>
             </div>

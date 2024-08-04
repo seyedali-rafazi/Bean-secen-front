@@ -1,12 +1,10 @@
 import React from "react";
 
 function TextField({
-  label,
   name,
   register,
   validationSchema,
   type = "text",
-  required,
   errors,
   value,
   onChange,

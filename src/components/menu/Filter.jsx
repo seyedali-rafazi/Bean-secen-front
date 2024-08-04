@@ -1,6 +1,3 @@
-import React, { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
-import { CiSearch } from "react-icons/ci";
 import { FaChevronLeft } from "react-icons/fa";
 import { useLocation, useSearchParams } from "react-router-dom";
 import SearchInput from "../../ui/SearchInput";

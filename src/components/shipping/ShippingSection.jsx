@@ -23,7 +23,7 @@ function ShippingSection({ products, user }) {
           <span>
             <TiTick className="w-6 h-6" />
           </span>
-          <p className="p-2"> Place an order</p>
+          <p className="p-2">Place an order</p>
         </button>
       </InformationSection>
     </div>

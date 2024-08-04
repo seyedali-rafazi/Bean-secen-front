@@ -22,13 +22,14 @@ function FullAddress({ user, setOpen, open, onCkickSubmitAddress }) {
         </div>
         <div></div>
       </div>
-      <Modal logo=" آدرس" open={open} onClose={() => setOpen(false)}>
+      <Modal logo="Address" open={open} onClose={() => setOpen(false)}>
         <form
           className="w-full space-y-4"
-          onSubmit={handleSubmit(onCkickSubmitAddress)}>
+          onSubmit={handleSubmit(onCkickSubmitAddress)}
+        >
           <TextField
             className="textField"
-            placeholder="  آدرس:"
+            placeholder="Address:"
             errors={errors}
             name="address"
             type="text"
@@ -36,13 +37,14 @@ function FullAddress({ user, setOpen, open, onCkickSubmitAddress }) {
             onChange={(e) => setPrevAddress(e.target.value)}
             register={register}
             validationSchema={{
-              required: "  آدرس ضروری است",
+              required: "Address is required",
             }}
           />
           <button
             type="submit"
-            className="w-full font-bold text-slate-50 bg-primary py-2 rounded-md">
-            افزودن
+            className="w-full font-bold text-slate-50 bg-primary py-2 rounded-md"
+          >
+            Add
           </button>
         </form>
       </Modal>

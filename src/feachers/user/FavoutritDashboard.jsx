@@ -9,33 +9,33 @@ import PanelSceleton from "../../ui/PanelSceleton";
 
 const categoryGroups = [
   {
-    text: "همه",
+    text: "All",
     category: "all",
     url: "",
     id: 1,
   },
   {
-    text: "غذای اصلی",
-    category: "mainFood",
-    url: "?category=mainFood",
+    text: "Hot Coffee",
+    category: "hotCoffee",
+    url: "?category=hotCoffee",
     id: 2,
   },
   {
-    text: "پیش غذا",
-    category: "appetizer",
-    url: "?category=appetizer",
+    text: "Cake",
+    category: "cake",
+    url: "?category=cake",
     id: 3,
   },
   {
-    text: "دسر",
-    category: "dessert",
-    url: "?category=dessert",
+    text: "Milk Shake",
+    category: "milkShake",
+    url: "?category=milkShake",
     id: 4,
   },
   {
-    text: "نوشیدنی",
-    category: "deinks",
-    url: "?category=deinks",
+    text: "Beverage",
+    category: "beverage",
+    url: "?category=beverage",
     id: 5,
   },
 ];
@@ -55,16 +55,14 @@ function FavoutritDashboard() {
   return isLoading ? (
     <PanelSceleton />
   ) : (
-    <div className="flex flex-col items-center gap-5 border border-secondery-500 rounded-lg p-2">
+    <div className="flex flex-col items-center gap-5 border border-secondery-500 rounded-lg p-5">
       <button
         onClick={() => navigate(-1)}
         className="lg:hidden flex justify-start w-full"
       >
         <FaArrowRight />
       </button>
-      <p className="flex justify-start w-full font-bold text-lg">
-        علاقه مندی ها{" "}
-      </p>
+      <p className="flex justify-start w-full font-bold text-lg">Favorites</p>
       <span className="w-full block h-0.5 bg-secondery-500 rounded-full"></span>
       <div className="hidden lg:flex justify-center items-center gap-4 w-full">
         <div className="flex gap-1">
@@ -89,7 +87,7 @@ function FavoutritDashboard() {
         </div>
       </div>
       {user.favoriteProduct.length == 0 ? (
-        <EmptySection text="شما در حال حاضر هیچ غذای مورد علاقه ای ثبت نکرده اید !" />
+        <EmptySection text="You have not registered any favorite foods yet!" />
       ) : (
         <FillFavourit favourits={user.favoriteProduct} />
       )}

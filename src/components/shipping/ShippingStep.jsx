@@ -29,7 +29,7 @@ function ShippingStep() {
           <button onClick={() => navigate(-1)} className="text-secondery-500">
             <FaChevronRight />
           </button>
-          <p className="font-semibold">سبد خرید</p>
+          <p className="font-semibold">Shopping cart</p>
           <button className="text-secondery-500">
             <GoTrash />
           </button>
@@ -39,7 +39,7 @@ function ShippingStep() {
       <div className=" w-full flex justify-center px-5 md:px-12">
         {cart.productDetail.length == 0 ? (
           <div className="border border-red-100 rounded-lg w-full">
-            <EmptySection text="شما هنوز محصولی انتخاب نکردید!" />
+            <EmptySection text="You have not selected a product yet!" />
           </div>
         ) : (
           <ShippingSection user={user} products={cart.productDetail} />

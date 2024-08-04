@@ -5,8 +5,8 @@ import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 
 function LikeFood({ id }) {
-  const { userFavourit, isPending } = useFavourit();
-  const { user, isLoading } = useUser();
+  const { userFavourit } = useFavourit();
+  const { user } = useUser();
 
   const handelClick = (id, index) => {
     userFavourit(id);

@@ -10,9 +10,10 @@ function EmptySection({ text }) {
       <div className="absolute inset-0 m-auto flex flex-col justify-center items-center gap-8">
         <p className="font-semibold text-secondery-600 text-center">{text}</p>
         <button
-          onClick={() => navigate("/branch-menu/mainfood")}
-          className="border-2 font-semibold border-primary text-primary hover:bg-primary hover:text-secondery-50 duration-300 rounded-md px-10 py-2 w-1/3 min-w-48">
-          منوی رستوران
+          onClick={() => navigate("/branch-menu/hotCoffee")}
+          className="border-2 font-semibold border-primary text-primary hover:bg-primary hover:text-secondery-50 duration-300 rounded-md px-10 py-2 w-1/3 min-w-48"
+        >
+          Restaurant menu
         </button>
       </div>
     </div>
