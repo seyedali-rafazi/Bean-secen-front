@@ -26,7 +26,7 @@ function Fooddetails() {
             />
           </button>
           <h2 className="w-full text-center font-bold text-xl text-secondery-50">
-            جزيیات محصول
+            Product details
           </h2>
         </div>
         <div className="flex flex-col min-h-96 sm:flex-row justify-center items-center p-5 gap-5">

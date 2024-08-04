@@ -32,7 +32,7 @@ function AboutContent() {
         <div className="md:order-2 flex justify-center">
           <img
             className="object-cover object-center"
-            src="/styles/about-content.png"
+            src="/styles/about-content.webp"
             alt=""
           />
         </div>

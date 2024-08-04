@@ -19,7 +19,7 @@ export default {
         "hero-pattern": "url('/icons/Empty-page.svg')", // Replace with the actual path or URL
         "home-slide-one": "url('/styles/coffee_image.png')", // Replace with the actual path or URL
         "home-slide-two": "url('/styles/hot-coffee.jpg')", // Replace with the actual path or URL
-        "home-slide-three": "url('/styles/coffee-friends.png')", // Replace with the actual path or URL
+        "home-slide-three": "url('/styles/coffee-friends.webp')", // Replace with the actual path or URL
         "home-intruduction": "url('/styles/introduction.jpg')", // Replace with the actual path or URL
         "home-footer": "url('/styles/footer.webp')", // Replace with the actual path or URL
         "home-branch-1": "url('/styles/ekbatan.jpg')", // Replace with the actual path or URL

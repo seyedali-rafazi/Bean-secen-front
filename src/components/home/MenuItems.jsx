@@ -6,22 +6,22 @@ import { useSearchMenu } from "../../context/SearchContext";
 const menuFoods = [
   {
     foodItemName: "Hot Coffee",
-    foodItemPhoto: "/styles/hot-coffee.png",
+    foodItemPhoto: "/styles/hot-coffee.webp",
     pathName: "/branch-menu/hotCoffee",
   },
   {
     foodItemName: "Cake",
-    foodItemPhoto: "/styles/cake.png",
+    foodItemPhoto: "/styles/cake.webp",
     pathName: "/branch-menu/cake",
   },
   {
     foodItemName: "Milk Shake",
-    foodItemPhoto: "/styles/milk-shake.png",
+    foodItemPhoto: "/styles/milk-shake.webp",
     pathName: "/branch-menu/milkShake",
   },
   {
     foodItemName: "Beverage",
-    foodItemPhoto: "/styles/mohito.png",
+    foodItemPhoto: "/styles/mohito.webp",
     pathName: "/branch-menu/Beverage",
   },
 ];
