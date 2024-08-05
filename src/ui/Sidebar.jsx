@@ -44,7 +44,7 @@ function Sidebar({ open, onClose }) {
               />
               <img
                 className="absolute top-12 right-4 "
-                src="/styles/tarkineh-sidebar.png"
+                src="/styles/Bean-Scene.png"
                 alt=""
               />
               <button onClick={onClose}>
