@@ -1,4 +1,6 @@
 # CoffeeShop Frontend App
+### See [Live](https://beanscene-coffee.vercel.app/)
+
 
 
 This is the frontend application for a CoffeeShop platform, built using React.js. The app provides a user-friendly interface for customers to browse CoffeeShops, view menus, place orders, and track their order status.
